@@ -425,25 +425,90 @@
 			"name": "currency",
 			"event": [
 				{
-					"listen": "prerequest",
+					"listen": "test",
 					"script": {
 						"exec": [
-							"// pm.environment.set('Random number', Math.floor(Math.random()*356));\r",
+							"let object = JSON.parse(responseBody);\r",
+							"let i=object.length;\r",
+							"function getRandomID (max) {\r",
+							"    return max[Math.floor(Math.random() * max.length)]; \r",
+							"};\r",
+							"// console.log( getRandomID(object))\r",
+							"\r",
+							"pm.environment.set('Cur_ID',getRandomID(object).Cur_ID)\r",
+							"\r",
+							"\r",
+							"\r",
+							"// const options = {\r",
+							"//     url : 'http://168.119.182.98:5002/curr_byn',\r",
+							"//     method:'POST',\r",
+							"//     header: {\r",
+							"//         'Content-Type':'application/json',\r",
+							"//         'X-Foo': 'bar'\r",
+							"//     },\r",
+							"//     body: {\r",
+							"//         mode: 'form-data',\r",
+							"//         formdata:\r",
+							"//         [\r",
+							"//             {key:'curr_code', value: '23' } ,\r",
+							"//             {key:'auth_token', value:'/s34lfgbj/Nastya/jjd909/58137kjkWpqc3413123129949evny' }\r",
+							"//         ]\r",
+							"//     }\r",
+							"// }\r",
+							"\r",
+							"\r",
+							"let  curr_list = [];\r",
+							"for (let n = 0; n < i; n++){        \r",
+							"    curr_list.push(object[n].Cur_ID);\r",
+							"};\r",
+							"console.log(curr_list);\r",
+							"\r",
+							"for ( let a = 0 ; a < curr_list.length ; a++){\r",
+							"    // pm.request(curr_list[a])\r",
+							"    pm.sendRequest(\"http://168.119.182.98:5002/curr_byn\", function (err, response) {\r",
+							"      \r",
+							"console.log(curr_list[a])\r",
+							"};\r",
+							"\r",
+							"//     pm.request(curr_list[a])\r",
+							"//     if (response == 200){     \r",
+							"//     }\r",
+							"\r",
+							"// }\r",
+							"\r",
+							"\r",
+							"// console.log(curr_list);\r",
+							"\r",
+							"// const postRequest = {\r",
+							"//     url : 'http://168.119.182.98:5002/curr_byn',\r",
+							"//     method:'POST',\r",
+							"//     header: {\r",
+							"//         'Content-Type':'application/json',\r",
+							"//         'X-Foo': 'bar'\r",
+							"//     },\r",
+							"//     body: {\r",
+							"//         mode: 'form-data',\r",
+							"//         formdata:\r",
+							"//         [\r",
+							"//             {key:'curr_code', value: '23' } ,\r",
+							"//             {key:'auth_token', value:'/s34lfgbj/Nastya/jjd909/58137kjkWpqc3413123129949evny' }\r",
+							"//         ]\r",
+							"//     }\r",
+							"// }\r",
+							"\r",
+							"\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
 					}
 				},
 				{
-					"listen": "test",
+					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"let object = JSON.parse(responseBody)\r",
-							"function getRandomID (max) {\r",
-							"    return max[Math.floor(Math.random() * max.length)]; \r",
-							"};\r",
 							"\r",
-							"pm.environment.set('Cur_ID',getRandomID(object).Cur_ID)"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -506,6 +571,17 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// pm.sendRequest(\"http://168.119.182.98:5002/currency\", function (err, response) {\r",
+							"//     console.log(response.json());\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -521,7 +597,7 @@
 						},
 						{
 							"key": "curr_code",
-							"value": "23",
+							"value": "{{Cur_ID}}",
 							"type": "text"
 						}
 					]
