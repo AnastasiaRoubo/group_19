@@ -1,0 +1,29 @@
+2021-07-09 21:27:10.046 2470-2505/com.android.todolist D/libEGL: Emulator has host GPU support, qemu.gles is set to 1.
+2021-07-09 21:27:10.042 2470-2470/com.android.todolist I/RenderThread: type=1400 audit(0.0:13): avc: denied { write } for name="property_service" dev="tmpfs" ino=9369 scontext=u:r:untrusted_app_27:s0:c101,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1 app=com.android.todolist
+2021-07-09 21:27:10.042 2470-2470/com.android.todolist I/RenderThread: type=1400 audit(0.0:14): avc: denied { connectto } for path="/dev/socket/property_service" scontext=u:r:untrusted_app_27:s0:c101,c256,c512,c768 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1 app=com.android.todolist
+2021-07-09 21:27:10.084 2470-2505/com.android.todolist D/libEGL: loaded /vendor/lib/egl/libEGL_emulation.so
+2021-07-09 21:27:10.117 2470-2505/com.android.todolist D/libEGL: loaded /vendor/lib/egl/libGLESv1_CM_emulation.so
+2021-07-09 21:27:10.122 2470-2505/com.android.todolist D/libEGL: loaded /vendor/lib/egl/libGLESv2_emulation.so
+2021-07-09 21:27:10.212 2470-2470/com.android.todolist W/ndroid.todolis: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+2021-07-09 21:27:10.213 2470-2470/com.android.todolist W/ndroid.todolis: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+2021-07-09 21:27:10.588 2470-2503/com.android.todolist W/OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+2021-07-09 21:27:10.600 2470-2503/com.android.todolist D/EGL_emulation: eglCreateContext: 0xe9e13d20: maj 3 min 1 rcv 4
+2021-07-09 21:27:10.788 2470-2503/com.android.todolist W/Gralloc3: mapper 3.x is not supported
+2021-07-09 21:27:10.845 2470-2503/com.android.todolist E/eglCodecCommon: goldfish_dma_create_region: could not obtain fd to device! fd -1 errno=2
+2021-07-09 21:27:11.581 2470-2470/com.android.todolist I/Choreographer: Skipped 68 frames!  The application may be doing too much work on its main thread.
+2021-07-09 21:27:22.342 2470-2503/com.android.todolist D/OpenGLRenderer: endAllActiveAnimators on 0xcb7fea80 (RippleDrawable) with handle 0xcb9f41e0
+2021-07-09 21:27:23.478 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@4feac18
+2021-07-09 21:27:35.741 2470-2470/com.android.todolist W/VelocityTracker: division by 0 when computing velocity, Sxx=0.000076, Sx2x2=0.000000, Sxx2=-0.000001
+2021-07-09 21:27:35.741 2470-2470/com.android.todolist W/VelocityTracker: division by 0 when computing velocity, Sxx=0.000076, Sx2x2=0.000000, Sxx2=-0.000001
+2021-07-09 21:27:51.766 2470-2470/com.android.todolist I/System.out: bread en 1
+2021-07-09 21:27:52.959 2470-2470/com.android.todolist I/System.out: 000000 en 1
+2021-07-09 21:29:20.780 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@dca7bfe
+2021-07-09 21:29:41.992 2470-2503/com.android.todolist D/OpenGLRenderer: endAllActiveAnimators on 0xc8600780 (RippleDrawable) with handle 0xcb9f4a30
+2021-07-09 21:29:43.556 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@bac2608
+2021-07-09 21:30:10.306 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@88a26e6
+2021-07-09 21:30:14.143 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@ec2a89f
+2021-07-09 21:30:16.022 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@17fc658
+2021-07-09 21:30:17.244 2470-2470/com.android.todolist W/ndroid.todolis: Accessing hidden method Landroid/widget/PopupWindow;->setClipToScreenEnabled(Z)V (greylist, reflection, allowed)
+2021-07-09 21:30:17.253 2470-2470/com.android.todolist W/ndroid.todolis: Accessing hidden field Landroid/widget/AbsListView;->mIsChildViewEnabled:Z (greylist, reflection, allowed)
+2021-07-09 21:30:18.358 2470-2470/com.android.todolist W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@4d3125a
+2021-07-09 21:30:18.664 2470-2503/com.android.todolist D/OpenGLRenderer: endAllActiveAnimators on 0xc897e000 (MenuPopupWindow$MenuDropDownListView) with handle 0xcb1d1780
